@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('../fonts/icons.eot?t36bbu');
-  src:  url('../fonts/icons.eot?t36bbu#iefix') format('embedded-opentype'),
-    url('../fonts/icons.ttf?t36bbu') format('truetype'),
-    url('../fonts/icons.woff?t36bbu') format('woff'),
-    url('../fonts/icons.svg?t36bbu#icons') format('svg');
+  src:  url('../fonts/icons.eot?zf8qoi');
+  src:  url('../fonts/icons.eot?zf8qoi#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?zf8qoi') format('truetype'),
+    url('../fonts/icons.woff?zf8qoi') format('woff'),
+    url('../fonts/icons.svg?zf8qoi#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,31 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-memory:before {
+.icon-bolt:before {
   content: "\e900";
 }
-.icon-github:before {
+.icon-magic:before {
   content: "\e901";
 }
-.icon-code:before {
+.icon-memory:before {
   content: "\e902";
 }
-.icon-magic:before {
+.icon-feather-alt:before {
   content: "\e903";
 }
-.icon-bolt:before {
+.icon-code:before {
   content: "\e904";
 }
-.icon-feather-alt:before {
+.icon-running:before {
   content: "\e905";
 }
-.icon-book:before {
+.icon-github:before {
   content: "\e906";
 }
-.icon-running:before {
+.icon-telegram:before {
   content: "\e907";
 }
-
 .icon-4x {
   font-size: 80px;
 }

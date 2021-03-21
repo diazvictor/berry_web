@@ -8,6 +8,17 @@
  * Para compilar el archivo desde la consola de comandos:
  * lessc base.less > base.css
  */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Monaco';
+  src: url('../fonts/Monaco.ttf') format('truetype');
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -224,10 +235,10 @@ h2 .be-header {
   margin: 1rem 0;
 }
 .container > .content article section pre {
+  font-family: "Monaco";
   padding: 1.25em;
   border: 1px solid #00AD4E;
   border-left-width: 5px;
-  margin: 1rem 0;
   font-size: 0.875em;
   background: #fafafa;
   white-space: pre-wrap;
@@ -252,10 +263,61 @@ h2 .be-header {
   grid-template-columns: repeat(2, 1fr);
   margin: 2rem 0;
 }
+.container > .content article#brief-tour .be-columns {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr;
+  margin: 2rem 0;
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(1),
+.container > .content article#brief-tour .be-columns .be-row:nth-child(3) {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "description code";
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(1) .be-column:first-child,
+.container > .content article#brief-tour .be-columns .be-row:nth-child(3) .be-column:first-child {
+  grid-area: description;
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(1) .be-column:last-child,
+.container > .content article#brief-tour .be-columns .be-row:nth-child(3) .be-column:last-child {
+  grid-area: code;
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(2),
+.container > .content article#brief-tour .be-columns .be-row:nth-child(4) {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "code description";
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(2) .be-column:first-child,
+.container > .content article#brief-tour .be-columns .be-row:nth-child(4) .be-column:first-child {
+  grid-area: description;
+}
+.container > .content article#brief-tour .be-columns .be-row:nth-child(2) .be-column:last-child,
+.container > .content article#brief-tour .be-columns .be-row:nth-child(4) .be-column:last-child {
+  grid-area: code;
+}
 .container > .footer {
   margin-bottom: 20px;
   grid-area: footer;
   text-align: center;
+}
+.container > .footer .social-media {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container > .footer .social-media a i {
+  font-size: 25px;
+}
+.container > .footer .social-media a + a {
+  margin: 0 5px;
+}
+.container > .footer .social-media + p {
+  margin-top: 10px;
 }
 @media screen and (max-width: 600px) {
   .be-btn {
@@ -296,5 +358,26 @@ h2 .be-header {
   .container > .content article#advantages .be-columns,
   .container > .content article#features .be-columns {
     grid-template-columns: 1fr;
+  }
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(1),
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(2),
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(3),
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(4) {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "description" "code";
+  }
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(1) .be-column:first-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(2) .be-column:first-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(3) .be-column:first-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(4) .be-column:first-child {
+    grid-area: description;
+  }
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(1) .be-column:last-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(2) .be-column:last-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(3) .be-column:last-child,
+  .container > .content article#brief-tour .be-columns .be-row:nth-child(4) .be-column:last-child {
+    grid-area: code;
   }
 }

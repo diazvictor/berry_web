@@ -3,21 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Berry Script Language</title>
+	<link rel="canonical" href="https://berry.github.io/">
 	<meta name="author" content="Díaz Urbaneja Víctor Eduardo Diex (diazvictor)">
+	<meta name="description" content="Berry is a ultra-lightweight dynamically typed embedded scripting language. It is designed for lower-performance embedded devices.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/berry_web/assets/css/base.css">
-	<link rel="stylesheet" href="/berry_web/assets/css/highlight.css">
-	<link rel="stylesheet" href="/berry_web/assets/css/icons.css">
-	<link rel="shortcut icon" href="/berry_web/assets/images/icon.svg" type="image/x-icon">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="The Berry Script Language">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://berry.github.io/">
+	<meta property="og:image" content="https://berry.github.io/assets/images/logo.svg">
+	<meta property="og:description" content="Berry is a ultra-lightweight dynamically typed embedded scripting language. It is designed for lower-performance embedded devices.">
+	<meta property="og:site_name" content="The Berry Script Language">
+	<meta property="og:locale" content="EN_en">
+	<meta property="og:updated_time" content="2021-03-21T03:06:53-04:00"/>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "The Berry Script Language",
+			"url": "https://berry.github.io/",
+			"logo": "https://berry.github.io/assets/images/logo.svg"
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"url": "https://berry.github.io/"
+		}
+	</script>
+
+	<link rel="stylesheet" href="/assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/highlight.css">
+	<link rel="stylesheet" href="/assets/css/icons.css">
+	<link rel="shortcut icon" href="/assets/images/icon.svg" type="image/x-icon">
 </head>
 <body>
 	<div class="container">
 		<header class="hero">
 			<div class="hero-head">
-				<nav class="navbar">
+				<nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<div class="navbar-brand">
 						<a class="navbar-logo" href="javascript:;">
-							<img src="/berry_web/assets/images/icon.svg" width="32" alt="Logo">
+							<img src="/assets/images/icon.svg" width="32" alt="Logo">
 						</a>
 					</div>
 					<span class="navbar-burger">
@@ -26,39 +55,45 @@
 						<span></span>
 					</span>
 					<div class="navbar-menu">
-						<a class="navbar-item go-element" href="#what-is-it">
-							What is it ?
+						<a itemprop="url" class="navbar-item go-element" href="#what-is-it">
+							<span itemprop="name">What is it ?</span>
 						</a>
-						<a class="navbar-item go-element" href="#features">
-							Features
+						<a itemprop="url" class="navbar-item go-element" href="#features">
+							<span itemprop="name">Features</span>
 						</a>
-						<a class="navbar-item go-element" href="#documentation">
-							Documentation
+						<a itemprop="url" class="navbar-item go-element" href="#documentation">
+							<span itemprop="name">Documentation</span>
 						</a>
-						<a class="navbar-item" href="https://github.com/Skiars/berry" target="_blank">
-							Github <i class="icon-github"></i>
+						<a itemprop="url" class="navbar-item go-element" href="#brief-tour" target="_blank">
+							<span itemprop="name">Brief tour</span>
 						</a>
 					</div>
 				</nav>
 			</div>
 			<div class="hero-body">
 				<div class="content">
-					<img src="/berry_web/assets/images/logo.svg" class="logo" alt="Logo">
+					<img src="/assets/images/logo.svg" class="logo" alt="Logo">
 					<p class="subtitle">
 						The Berry Script Language.
 					</p>
-					<div class="buttons">
-						<a href="/berry_web/try-online.html" target="_blank" class="be-btn outline">Try Online</a>
-						<a href="https://github.com/Skiars/berry" target="_blank" class="be-btn">Github <i class="icon-github"></i></a>
+					<div class="buttons" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<a itemprop="url" href="/try-online/" target="_blank" class="be-btn outline">
+							<span itemprop="name">Try Online</span>
+						</a>
+						<a itemprop="url" href="https://github.com/Skiars/berry" target="_blank" class="be-btn">
+							<span itemprop="name">GitHub</span> <i class="icon-github"></i>
+						</a>
 					</div>
 				</div>
 			</div>
 		</header>
 		<main class="content">
 			<article id="what-is-it">
-				<section>
-					<h1 class="be-header">What is it ?</h1>
-					<p>
+				<section itemscope itemtype="http://schema.org/CreativeWork">
+					<header>
+						<h1 itemprop="name" class="be-header">What is it ?</h1>
+					</header>
+					<p itemprop="description">
 						Berry is a ultra-lightweight dynamically typed embedded scripting language. It is designed for lower-performance embedded devices. The Berry interpreter-core's code size is less than 40KiB and can run on less than 4KiB heap (on ARM Cortex M4 CPU, Thumb ISA and ARMCC compiler).
 					</p>
 					<p>
@@ -69,7 +104,9 @@
 			<hr>
 			<article id="advantages">
 				<section>
-					<h1 class="be-header be-text-center">Berry has the following advantages</h1>
+					<header>
+						<h1 class="be-header be-text-center">Berry has the following advantages</h1>
+					</header>
 					<div class="be-columns">
 						<div class="be-text-center">
 							<i class="icon-feather-alt icon-4x"></i>
@@ -119,7 +156,9 @@
 			<hr>
 			<article id="documentation">
 				<section>
-					<h1 class="be-header">Documentation</h1>
+					<header>
+						<h1 class="be-header">Documentation</h1>
+					</header>
 					<p>
 						LaTeX documents repository: <a href="https://github.com/Skiars/berry_doc">https://github.com/Skiars/berry_doc</a>
 					</p>
@@ -137,11 +176,13 @@
 			<hr>
 			<article id="features">
 				<section>
-					<h1 class="be-header">Features</h1>
+					<header>
+						<h1 class="be-header">Features</h1>
+					</header>
 					<div class="be-columns">
 						<ul>
 							<li>
-								<mark>Base Type</mark>
+								<b>Base Type</b>
 								<ul>
 									<li>Nil: <mark>nil</mark></li>
 									<li>Boolean: <mark>true</mark> and <mark>false</mark></li>
@@ -158,7 +199,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Operator and Expression</mark>
+								<b>Operator and Expression</b>
 								<ul>
 									<li>Assign operator: <mark>=</mark>, <mark>+=</mark>, <mark>-=</mark>, <mark>*=</mark>, <mark>/=</mark>, <mark>%=</mark>, <mark>&=</mark>, <mark>|=</mark>, <mark>^=</mark>, <mark>&lt;&lt;=</mark>, <mark>&gt;&gt;=</mark></li>
 									<li>Relational operator: <mark><</mark>, <mark><=</mark>, <mark>==</mark>, <mark>!=</mark>, <mark>></mark>, <mark>&gt;=</mark></li>
@@ -175,7 +216,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Control Structure</mark>
+								<b>Control Structure</b>
 								<ul>
 									<li>Conditional statement: <mark>if-else</mark></li>
 									<li>Iteration statement: <mark>while</mark> and <mark>for</mark></li>
@@ -185,7 +226,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Function</mark>
+								<b>Function</b>
 								<ul>
 									<li>Local variable and block scope</li>
 									<li>Return statement</li>
@@ -198,7 +239,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Class</mark>
+								<b>Class</b>
 								<ul>
 									<li>Inheritance (only public single inheritance)</li>
 									<li>Method and Operator Overload</li>
@@ -209,7 +250,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Module Management</mark>
+								<b>Module Management</b>
 								<ul>
 									<li>Built-in module that takes almost no RAM</li>
 									<li>Extension module support: script module, bytecode file module and shared library (like *.so, *.dll) module</li>
@@ -218,7 +259,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>GC (Garbage collection)</mark>
+								<b>GC (Garbage collection)</b>
 								<ul>
 									<li>Mark-Sweep GC</li>
 								</ul>
@@ -226,7 +267,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Exceptional Handling</mark>
+								<b>Exceptional Handling</b>
 								<ul>
 									<li>Throw any exception value using the <mark>raise</mark> statement</li>
 									<li>Multiple catch mode</li>
@@ -235,7 +276,7 @@
 						</ul>
 						<ul>
 							<li>
-								<mark>Bytecode file support</mark>
+								<b>Bytecode file support</b>
 								<ul>
 									<li>Load the bytecode file and execute</li>
 								</ul>
@@ -245,75 +286,130 @@
 				</section>
 			</article>
 			<hr>
+			<article id="brief-tour">
+				<section>
+					<header>
+						<h1 class="be-header">Brief tour</h1>
+					</header>
+					<div class="be-columns">
+						<div class="be-row">
+							<div class="be-column">
+								<h3>Simple and intuitive syntax</h3>
+								<p>
+									The Berry language syntax is similar to that of high-level languages and will be familiar to most programmers.
+								</p>
+							</div>
+							<div class="be-column">
+<pre class="hl">
+<span class="hl kwa">var</span> list <span class="hl opt">= [</span> <span class="hl str">&quot;Hello&quot;</span><span class="hl opt">,</span> <span class="hl str">&quot;World&quot;</span> ]
+<span class="hl kwa">for</span> text <span class="hl opt">:</span> list
+    <span class="hl kwd">print</span><span class="hl opt">(</span>text<span class="hl opt">)</span>
+<span class="hl kwa">end</span>
+</pre>
+							</div>
+						</div>
+						<div class="be-row">
+							<div class="be-column">
+								<h3>Map Instance</h3>
+								<p>
+									The map class is a built-in class type that is used to provide an unordered container of key-value pairs. Within the Berry interpreter, map map uses the Hash table to implement. You can use key-value pairs to construct a map container.
+								</p>
+							</div>
+							<div class="be-column">
+<pre class="hl"><span class="hl kwa">var</span> map <span class="hl opt">= {</span>
+    <span class="hl str">&#39;greets&#39;</span><span class="hl opt">:</span> <span class="hl kwa">def</span><span class="hl opt">()</span> <span class="hl kwa">return</span> <span class="hl str">&#39;Hi!</span> <span class="hl str">Berry</span><span class="hl str">&#39; </span><span class="hl kwa">end</span> <span class="hl opt">()</span><span class="hl opt">,</span>
+<span class="hl str">    &#39;</span><span class="hl str">say</span><span class="hl str">&#39;   : &#39;</span><span class="hl str">Hello World</span><span class="hl str">&#39;</span><span class="hl opt">,</span>
+<span class="hl str">    &#39;</span><span class="hl str">sum</span><span class="hl str">&#39;   : </span><span class="hl num">10</span> <span class="hl opt">+</span> <span class="hl num">50</span>
+<span class="hl opt">}</span>
+<span class="hl kwa">for</span> i <span class="hl opt">:</span> map<span class="hl opt">.</span><span class="hl kwd">keys</span><span class="hl opt">()</span>
+    <span class="hl kwd">print</span><span class="hl opt">(</span>i<span class="hl opt">,</span> <span class="hl str">&quot;\t=>&quot;</span><span class="hl opt">,</span> map<span class="hl opt">[</span>i<span class="hl opt">]</span><span class="hl opt">)</span>
+<span class="hl kwa">end</span>
+</pre>
+							</div>
+						</div>
+						<div class="be-row">
+							<div class="be-column">
+								<h3>Object Orientation</h3>
+								<p>
+									To use a class, you must first declare it. The declaration of a class begins with the keyword class.
+								</p>
+								<p>
+									The member variables and methods of the class must be specified in the declaration. This is an example of class declaration:
+								</p>
+							</div>
+							<div class="be-column">
+<pre class="hl"><span class="hl kwa">import</span> <span class="hl kwd">string</span>
+
+<span class="hl kwa">class</span> Parent
+    <span class="hl slc">#- member variables  -#</span>
+    <span class="hl kwa">var</span> fname
+    <span class="hl kwa">var</span> cname
+
+    <span class="hl slc">#- constructor -#</span>
+    <span class="hl kwa">def</span> <span class="hl kwd">init</span><span class="hl opt">()</span>
+        <span class="hl kwa">self</span><span class="hl opt">.</span>fname <span class="hl opt">=</span> <span class="hl str">&#39;Darth vader&#39;</span>
+    <span class="hl kwa">end</span>
+
+    <span class="hl slc">#- Method -#</span>
+    <span class="hl kwa">def</span> <span class="hl kwd">say</span><span class="hl opt">()</span>
+        <span class="hl kwa">return</span> <span class="hl kwd">string</span><span class="hl opt">.</span><span class="hl kwd">format</span><span class="hl opt">(</span>
+            <span class="hl str">&#39;%s say</span><span class="hl str">\n</span><span class="hl str">%s %s&#39;</span><span class="hl opt">,</span> <span class="hl kwa">self</span><span class="hl opt">.</span>fname<span class="hl opt">,</span>
+            <span class="hl kwa">self</span><span class="hl opt">.</span>cname<span class="hl opt">,</span> <span class="hl str">&quot;i&#39;m your father&quot;</span>
+        <span class="hl opt">)</span>
+    <span class="hl kwa">end</span>
+<span class="hl kwa">end</span>
+</pre>
+							</div>
+						</div>
+						<div class="be-row">
+							<div class="be-column">
+								<h3>Class inheritance</h3>
+								<p>
+									Berry only supports single inheritance, that is, a class can only have one base class, and the base class uses the operator : to declare :
+								</p>
+								<p>
+									Here the Child class inherits from the Parent class. The subclass will inherit all the methods and properties of the Parent class, and you can override them in the subclass. This mechanism is called Overload.
+								</p>
+							</div>
+							<div class="be-column">
+<pre class="hl"><span class="hl kwa">class</span> Child <span class="hl opt">:</span> Parent
+    <span class="hl slc">#- constructor -#</span>
+    <span class="hl kwa">def</span> <span class="hl kwd">init</span><span class="hl opt">(</span>name<span class="hl opt">)</span>
+        <span class="hl kwa">self</span><span class="hl opt">.</span>fname <span class="hl opt">=</span> <span class="hl kwd">Parent</span><span class="hl opt">().</span>fname
+        <span class="hl kwa">self</span><span class="hl opt">.</span>cname <span class="hl opt">=</span> name
+    <span class="hl kwa">end</span>
+<span class="hl kwa">end</span>
+
+child <span class="hl opt">=</span> <span class="hl kwd">Child</span><span class="hl opt">(</span><span class="hl str">&#39;Luke&#39;</span><span class="hl opt">)</span>
+<span class="hl kwd">print</span><span class="hl opt">(</span> child<span class="hl opt">.</span><span class="hl kwd">say</span><span class="hl opt">() )</span> <span class="hl slc">#child inherits from parent the say method</span>
+</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+			<hr>
 			<article id="examples">
 				<section>
-					<h1>Examples</h1>
-<pre class="hl"><span class="hl slc"># fib_rec.be</span>
-
-<span class="hl kwa">import</span> time
-
-<span class="hl kwa">def</span> <span class="hl kwd">fib</span><span class="hl opt">(</span>x<span class="hl opt">)</span>
-    <span class="hl kwa">if</span> x <span class="hl opt">&lt;=</span> <span class="hl num">2</span>
-        <span class="hl kwa">return</span> <span class="hl num">1</span>
-    <span class="hl kwa">end</span>
-    <span class="hl kwa">return</span> <span class="hl kwd">fib</span><span class="hl opt">(</span>x <span class="hl opt">-</span> <span class="hl num">1</span><span class="hl opt">) +</span> <span class="hl kwd">fib</span><span class="hl opt">(</span>x <span class="hl opt">-</span> <span class="hl num">2</span><span class="hl opt">)</span>
-<span class="hl kwa">end</span>
-
-<span class="hl kwa">var</span> c <span class="hl opt">=</span> <span class="hl kwd">time</span><span class="hl opt">.</span><span class="hl kwd">clock</span><span class="hl opt">()</span>
-<span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl str">&quot;fib:&quot;</span><span class="hl opt">,</span> <span class="hl kwd">fib</span><span class="hl opt">(</span><span class="hl num">38</span><span class="hl opt">))</span> <span class="hl slc"># minimum stack size: 78!!</span>
-<span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl str">&quot;time:&quot;</span><span class="hl opt">,</span> <span class="hl kwd">time</span><span class="hl opt">.</span><span class="hl kwd">clock</span><span class="hl opt">() -</span> c<span class="hl opt">,</span> <span class="hl str">&#39;s&#39;</span><span class="hl opt">)</span>
-</pre>
-<pre class="hl"><span class="hl slc"># json.be </span>
-
-<span class="hl kwa">import</span> json
-<span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl kwd">json</span><span class="hl opt">.</span><span class="hl kwd">load</span><span class="hl opt">(</span><span class="hl str">&#39;{&quot;key&quot;: &quot;value&quot;}&#39;</span><span class="hl opt">))</span>
-<span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl kwd">json</span><span class="hl opt">.</span><span class="hl kwd">dump</span><span class="hl opt">({</span><span class="hl str">&#39;test key&#39;</span><span class="hl opt">:</span> <span class="hl kwa">nil</span><span class="hl opt">}))</span>
-<span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl kwd">json</span><span class="hl opt">.</span><span class="hl kwd">dump</span><span class="hl opt">({</span><span class="hl str">&#39;key1&#39;</span><span class="hl opt">:</span> <span class="hl kwa">nil</span><span class="hl opt">,</span> <span class="hl num">45</span><span class="hl opt">:</span> <span class="hl kwa">true</span><span class="hl opt">},</span> <span class="hl str">&#39;format&#39;</span><span class="hl opt">))</span>
-</pre>
-<pre class="hl"><span class="hl slc"># person.be</span>
-
-<span class="hl kwa">class</span> <span class="hl kwd">Person</span>
-	<span class="hl kwa">var</span> name<span class="hl opt">,</span> age
-	<span class="hl kwa">def</span> <span class="hl kwd">init</span><span class="hl opt">(</span>name<span class="hl opt">,</span> age<span class="hl opt">)</span>
-		</span><span class="hl kwi">self</span><span class="hl opt">.</span>name <span class="hl opt">=</span> name
-		</span><span class="hl kwi">self</span><span class="hl opt">.</span>age <span class="hl opt">=</span> age
-	<span class="hl kwa">end</span>
-	<span class="hl kwa">def</span> <span class="hl kwd">tostring</span><span class="hl opt">()</span>
-		<span class="hl kwa">return</span><span class="hl str">&#39;name: &#39;</span><span class="hl opt">+</span> <span class="hl kwb">str</span><span class="hl opt">(</span></span><span class="hl kwi">self</span><span class="hl opt">.</span>name<span class="hl opt">) +</span><span class="hl str">&#39;, age: &#39;</span> <span class="hl opt">+</span> <span class="hl kwb">str</span><span class="hl opt">(</span></span><span class="hl kwi">self</span><span class="hl opt">.</span>age<span class="hl opt">)</span>
-	<span class="hl kwa">end</span>
-<span class="hl kwa">end</span>
-
-<span class="hl kwa">var</span> johndoe <span class="hl opt">=</span> <span class="hl kwd">Person</span><span class="hl opt">(</span><span class="hl str">&quot;Johndoe&quot;</span><span class="hl opt">,</span> <span class="hl num">25</span><span class="hl opt">)</span>
-<span class="hl kwd">print</span><span class="hl opt">(</span>johndoe<span class="hl opt">)</span>
-</pre>
-<pre class="hl"><span class="hl slc"># scandir.be</span>
-
-<span class="hl kwa">import</span> os
-
-<span class="hl kwa">def</span> <span class="hl kwd">scandir</span><span class="hl opt">(</span>path<span class="hl opt">)</span>
-    <span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl str">&#39;path: &#39;</span> <span class="hl opt">+</span> path<span class="hl opt">)</span>
-    <span class="hl kwa">for</span> name <span class="hl opt">:</span> <span class="hl kwd">os</span><span class="hl opt">.</span><span class="hl kwd">listdir</span><span class="hl opt">(</span>path<span class="hl opt">)</span>
-        <span class="hl kwa">var</span> fullname <span class="hl opt">=</span> <span class="hl kwd">os</span><span class="hl opt">.</span><span class="hl kwd">path</span><span class="hl opt">.</span><span class="hl kwd">join</span><span class="hl opt">(</span>path<span class="hl opt">,</span> name<span class="hl opt">)</span>
-        <span class="hl kwa">if</span> <span class="hl kwd">os</span><span class="hl opt">.</span><span class="hl kwd">path</span><span class="hl opt">.</span><span class="hl kwd">isfile</span><span class="hl opt">(</span>fullname<span class="hl opt">)</span>
-            <span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl str">&#39;file: &#39;</span> <span class="hl opt">+</span> fullname<span class="hl opt">)</span>
-        <span class="hl kwa">else</span>
-            <span class="hl kwa">print</span><span class="hl opt">(</span><span class="hl str">&#39;path: &#39;</span> <span class="hl opt">+</span> fullname<span class="hl opt">)</span>
-            <span class="hl kwd">scandir</span><span class="hl opt">(</span>fullname<span class="hl opt">)</span>
-        <span class="hl kwa">end</span>
-    <span class="hl kwa">end</span>
-<span class="hl kwa">end</span>
-
-<span class="hl kwd">scandir</span><span class="hl opt">(</span><span class="hl str">&#39;.&#39;</span><span class="hl opt">)</span>
-</pre>
+					<header>
+						<h1 class="be-header">Examples</h1>
+					</header>
+					<p>
+						You can also check out these Berry example source files on <a href="https://github.com/Skiars/berry/tree/master/examples">GitHub</a>
+					</p>
 				</section>
 			</article>
 		</main>
 		<footer class="footer">
+			<nav itemscope itemtype="http://schema.org/WPFooter" class="social-media">
+				<a itemprop="url" rel="external noopener" href="https://github.com/Skiars/berry" target="_blank"><i class="icon-github"></i></a>
+				<a itemprop="url" rel="external noopener" href="https://t.me/berry_lang" target="_blank"><i class="icon-telegram"></i></a>
+			</nav>
 			<p>
 				Berry is free software distributed under the <a href="javascript:;">MIT license</a>.
 			</p>
 		</footer>
 	</div>
-	<script type="text/javascript" src="/berry_web/assets/js/main.js"></script>
+	<script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 </html>
